@@ -1,0 +1,5 @@
+Deadlock is a situation in operating systems where two or more processes are unable to proceed because each is waiting for resources held by the others.
+
+Deadlock prevention ensures that at least one of the necessary conditions for deadlock cannot occur.
+
+Deadlock avoidance requires prior knowledge of resource requirements of processes.
