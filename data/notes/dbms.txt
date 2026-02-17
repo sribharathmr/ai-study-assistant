@@ -1,0 +1,23 @@
+Database Management System (DBMS) is software used to store, manage, and retrieve data efficiently.
+
+A database is an organized collection of related data.
+
+A table consists of rows (records) and columns (attributes).
+
+Primary key uniquely identifies each record in a table.
+
+Foreign key links one table to another table.
+
+Normalization is the process of organizing data to reduce redundancy and improve data integrity.
+
+First Normal Form (1NF) removes repeating groups and ensures atomic attributes.
+
+Second Normal Form (2NF) removes partial dependency.
+
+Third Normal Form (3NF) removes transitive dependency.
+
+ACID properties ensure reliable database transactions:
+Atomicity, Consistency, Isolation, Durability.
+
+Transaction is a logical unit of work performed in a database.
+

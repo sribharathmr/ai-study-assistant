@@ -1,0 +1,21 @@
+Operating System (OS) is system software that manages computer hardware and software resources and provides services for computer programs.
+
+A process is a program in execution. It contains program code, current activity, memory, and system resources.
+
+Deadlock is a situation where two or more processes are unable to proceed because each is waiting for a resource held by another process.
+
+Four necessary conditions for deadlock:
+1. Mutual Exclusion
+2. Hold and Wait
+3. No Preemption
+4. Circular Wait
+
+Deadlock prevention ensures that at least one of the necessary conditions for deadlock cannot occur.
+
+Deadlock avoidance uses resource allocation information to avoid unsafe states.
+
+Deadlock detection identifies deadlock after it occurs and recovers the system.
+
+CPU scheduling is the method by which the operating system decides which process runs first.
+
+Types of scheduling algorithms include FCFS, SJF, Priority Scheduling, and Round Robin.
