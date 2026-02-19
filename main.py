@@ -1,16 +1,18 @@
 import nltk
-import time
+from src.load_notes import load_all_notes
+
 
 nltk.download('punkt')
 nltk.download('stopwords')
 
 from src.semantic_search import semantic_search
 from src.llm import generate_answer
+from src.chunker import chunk_text
+
 
 
 # Load notes
-with open("data/sample_notes.txt", "r") as file:
-    notes = file.read().split("\n\n")
+notes = load_all_notes()
 
 # Ask user
 question = input("Enter your question: ")
