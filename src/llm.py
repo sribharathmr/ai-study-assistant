@@ -1,27 +1,31 @@
 import ollama
+from src.memory import add_to_memory, get_memory
 
 def generate_answer(question, context):
 
-    prompt = f"""
+    system_prompt = f"""
 You are a helpful teacher.
 
 Answer ONLY using the context below.
-If answer not found in context, say "Not found in notes".
+If answer not found, say "Not found in notes".
 
 Context:
 {context}
-
-Question:
-{question}
-
-Explain in simple words:
 """
+
+    messages = [{"role": "system", "content": system_prompt}]
+    messages.extend(get_memory())
+    messages.append({"role": "user", "content": question})
 
     response = ollama.chat(
         model="phi3",
-        messages=[{"role": "user", "content": prompt}]
+        messages=messages
     )
 
-    return response["message"]["content"]
+    answer = response["message"]["content"]
+
+    add_to_memory(question, answer)
+
+    return answer
 
 
