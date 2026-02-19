@@ -10,6 +10,25 @@ def build_prompt(command, topic, context):
         return f"Teach this topic step-by-step for a beginner:\n{context}"
 
     elif command == "/quiz":
-        return f"Create 3 quiz questions from this topic. Do NOT give answers:\n{context}"
+        return f"""
+You are a strict examiner.
+
+Ask exactly ONE short question from the topic.
+
+Output format rules:
+- Only one sentence
+- No options
+- No explanation
+- No answer
+- No extra text
+- Do not repeat the topic
+
+Topic:
+{context}
+
+Your output must look like:
+Question: <one line question>
+"""
+
 
     return None
